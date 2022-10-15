@@ -99,17 +99,15 @@ main {
   background-color: #3f575a;
 }
 
-.col-sm{
-  max-width: 1000px;
-}
 
-/*Adds padding around content divs on larger screens*/
+/*Adds padding around content divs on larger screens and sets max width for divs within*/
 @media only screen and (min-width: 768px) {
   .row {
     padding-top: 1em;
     padding-left: 2em;
     padding-right: 2em;
     padding-bottom: 1em;
+    max-width: 1000px;
   }
 }
 
