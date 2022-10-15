@@ -1,0 +1,310 @@
+/*Sets up website fonts*/
+
+/* Font tajawal-300 - latin */
+@font-face {
+  font-family: "Tajawal";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/tajawal-v9-latin-300.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/tajawal-v9-latin-300.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/tajawal-v9-latin-300.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/tajawal-v9-latin-300.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/tajawal-v9-latin-300.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/tajawal-v9-latin-300.svg#Tajawal")
+      format("svg"); /* Legacy iOS */
+}
+
+/*Font Reitam Regular*/
+@font-face {
+  font-family: "ReitamRegular";
+  src: url("../fonts/ReitamRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*----------------------------Header/Nav Styling--------------------------*/
+
+/* Removes bullets from nav list and sets left alignment */
+nav ul li {
+  list-style-type: none;
+  float: left;
+}
+
+/*Sets bootstrap nav button font styling*/
+.btn-light {
+  font-family: "Tajawal";
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+/*Sets header styling*/
+header {
+  display: flex;
+  align-items: flex-end;
+  background-color: #ffffff;
+  flex-wrap: wrap;
+  border-bottom-style: inset;
+  border-color: #728788;
+  border-bottom-width: 0.1em;
+  padding-bottom: 0.8em;
+}
+
+/*------------------------Logo Styling------------------------------------*/
+
+/* Aligning logo and setting font styles*/
+.logo {
+  line-height: 0.1em;
+  text-decoration: none;
+}
+
+.logo-the-text {
+  font-family: "Tajawal";
+  line-height: 0.6em;
+  font-size: 1.8em;
+  color: #3f575a;
+}
+
+.logo-haukai-text {
+  font-family: "Tajawal";
+  line-height: 0.7em;
+  font-size: 1.8em;
+  color: #3f575a;
+}
+
+.logo-restaurant-text {
+  font-size: 0.5em;
+  font-family: "ReitamRegular";
+  letter-spacing: 0.1em;
+  color: #786247;
+}
+
+/*Styles line under logo*/
+.logo-line {
+  width: 6em;
+  border-top: 0.1em solid black;
+}
+
+/* Padding to push logo away from sides */
+h1 {
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+}
+
+/*-----------------------Main Styling-------------------------------------*/
+
+main {
+  background-color: #3f575a;
+}
+
+/*Adds padding around content divs on larger screens*/
+@media only screen and (min-width: 768px) {
+  .row {
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+  }
+}
+
+/*Adds smaller padding around content divs on smaller screens*/
+@media only screen and (max-width: 768px) {
+  .row {
+    padding-top: 0.5em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    padding-bottom: 0.5em;
+  }
+}
+
+/*Makes bootstrap columns have a white background*/
+.col-sm{
+  background-color:#dfdcd7;
+}
+
+/*Spaces out table data*/
+td {
+  padding-right: 1.3em;
+}
+
+/*Media queries to control sub menu display on Menu pages due to spacing and readability issues when using bootstrap to hide/display button groups*/
+/* Makes menu buttons display vertical for screens under 450px on menu page*/
+@media only screen and (max-width: 450px) {
+  .btn-group {
+    display: none;
+  }
+}
+
+/* Makes menu buttons display horizontal for screens over 450px on menu page*/
+@media only screen and (min-width: 450px) {
+  .btn-group-vertical {
+    display: none;
+  }
+}
+
+/*Stylings for Menu page tables*/
+
+.menu-items {
+  font-family: "Tajawal";
+  font-size: 1.5em;
+  color: #3f575a;
+}
+
+.menu-price {
+  font-family: "Tajawal";
+  font-size: 1.5em;
+  color: #a84736;
+  text-align: right;
+}
+
+.menu-description {
+  padding-top: 0.2em;
+  padding-bottom: 1.2em;
+  color: #786247;
+}
+
+.beverage-titles {
+  font-family: "Tajawal";
+  font-size: 1.5em;
+  color: #3f575a;
+  padding-top: 1em;
+}
+
+.beverage-b-g-title {
+  font-family: "Tajawal";
+  font-size: 1.2em;
+  color: #a84736;
+  padding-top: 1em;
+}
+
+.beverage-price {
+  font-family: "Tajawal";
+  font-size: 1.2em;
+  color: #a84736;
+  padding-bottom: 0.3em;
+}
+
+.beverage-items {
+  color: #786247;
+  padding-bottom: 0.3em;
+}
+
+/*Sizes smaller text boxes on pages with a form*/
+.text-box {
+  max-width: 12em;
+}
+
+/*Sizes larger message boxes on pages with a form*/
+.message-box {
+  height: 10em;
+  max-width: 25em;
+}
+
+/* Makes the roster calendars responsive */
+.responsive-iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  min-height: 15em;
+}
+
+.responsive-iframe-container iframe,
+.vresponsive-iframe-container object,
+.vresponsive-iframe-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*Shows message when appropriate time not yet chosen for reservation form*/
+input:invalid + span:after {
+  content: "Please choose a time between 4pm and 9pm";
+  color: #940909;
+}
+
+
+/*Background image styling for titles on small screens*/
+.mobile-image {
+  height: 2em;
+  width: 100%;
+  color: white;
+  font: 2em "Tajawal";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1em;
+  text-align: center;
+
+  background: linear-gradient(to top, #000000ad, #000000c9),
+    url("../images/fritters2-small.jpg") no-repeat top center;
+}
+
+.mobile-image2 {
+  height: 2em;
+  width: 100%;
+  color: white;
+  font: 2em "Tajawal";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1em;
+  text-align: center;
+
+  background: linear-gradient(to top, #000000ad, #000000c9),
+    url("../images/pavlova-small.jpg") no-repeat top center;
+}
+
+.mobile-image3 {
+  height: 2em;
+  width: 100%;
+  color: white;
+  font: 2em "Tajawal";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1em;
+  text-align: center;
+
+  background: linear-gradient(to top, #000000ad, #000000c9),
+    url("../images/food1-small.jpg") no-repeat top center;
+}
+
+/*----------------------Footer Styling-----------------------------------*/
+
+/*Removes bullets from footer link list*/
+footer ul li {
+  list-style-type: none;
+}
+
+/*Styles text of footer link list*/
+footer ul li a {
+  color: #3f575a;
+  text-decoration: none;
+}
+
+/* Styles link text while hovering*/
+footer ul li a:hover {
+  color: black;
+}
+
+footer {
+  display: flex;
+  align-items: flex-end;
+  background-color: #ffffff;
+  flex-wrap: wrap;
+  border-top-style: outset;
+  border-top-color: #728788;
+  border-top-width: 0.1em;
+  padding-top: 0.8em;
+}
+
+.footer-line {
+  width: 100%;
+  border-top: 0.1em solid black;
+}
